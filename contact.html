@@ -119,41 +119,32 @@
 
     <!-- custom menu -->
 
-    <!-- contact section -->
-
-    <section class="contact_section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
-            <h2 class="custom_heading">Kontak</h2>
-            <form action="#">
-              <div>
-                <input type="text" placeholder="Nama" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" placeholder="Nomor Telepon" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Pesan" />
-              </div>
-              <div class="d-flex mt-4">
-                <button>KIRIM</button>
-              </div>
-            </form>
+<!-- contact section -->
+<section class="contact_section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
+        <h2 class="custom_heading">Kontak WhatsApp</h2>
+        <h6 class="custom_heading">Jika Anda Memiliki Pertanyaan Silahkan Kirim Pesan Lewat WhatsApp Resmi Kami</h6>
+        <form id="whatsapp-form">
+          <div>
+            <input type="text" id="whatsapp-message" class="message-box" placeholder="Ketik Pesan" />
           </div>
-          <div class="col-md-6 px-0">
-            <div class="img-box">
-              <img src="images/contact.jpg" alt="" class="w-100" />
-            </div>
+          <div class="d-flex mt-4">
+            <button type="button" onclick="sendMessage()">KIRIM</button>
           </div>
+        </form>
+      </div>
+      <div class="col-md-6 px-0">
+        <div class="img-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.7159094109516!2d107.58221887499656!3d-6.924523493075212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTUnMjguMyJTIDEwN8KwMzUnMDUuMyJF!5e0!3m2!1sid!2sid!4v1722365099678!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<!-- end contact section -->
 
-    <!-- end contact section -->
 
     <!-- info section -->
     <section class="info_section layout_padding-top layout_padding2-bottom">
@@ -240,7 +231,15 @@
         <a href="https://html.design/">Exxpress-pin Bandung</a>
       </p>
     </footer>
-    <!-- footer section -->
+
+    <!-- send whatsapp -->
+    <script>
+      function sendMessage() {
+        var message = document.getElementById('whatsapp-message').value;
+        var url = 'https://wa.me/62895371827283?text=' + encodeURIComponent(message);
+        window.open(url, '_blank');
+      }
+    </script>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
