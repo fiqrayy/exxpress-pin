@@ -30,6 +30,10 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
 <body class="sub_page">
@@ -104,24 +108,26 @@
   <!-- custom menu -->
 
   <!-- section -->
+
   <section class="about_section layout_padding mt-5">
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <div class="img-box">
+          <div class="img-box" data-aos="fade-right" data-aos-duration="1000">
             <img src="images/about-img.png" alt="" />
           </div>
         </div>
         <div class="col-md-5">
-            <div class="custom_heading-container">
+            <div class="custom_heading-container" data-aos="fade-down" data-aos-duration="1000">
               <h2>
                 Desain Custom
               </h2>
             </div>
+            <div class="text" data-aos="fade-left" data-aos-duration="1000">
             <p>
               Kami menyediakan Enamel, Pin, Gantungan Kunci Dan Banyak Lagi Souvenir Lainnya Yang Dapat Anda Custom Sesuai Keinginan Anda. </br>
               Dengan Bahan Yang berkualitas Tinggi ,Dan Warna Yang Tajam Sehingga Sangat Cocok Untuk Di Jadikan Sebagai Souvenir.
-            </p>
+            </p></div>
             <div>
               <a href="https://wa.me/62895371827283?text=Halo%20saya%20tertarik%20dengan%20produk%20ExxpressPin" class="btn btn-whatsapp mt-2 animate-zoom">
                 <i class="fab fa-whatsapp"></i> Whatsapp Penjual
@@ -138,6 +144,8 @@
       </div>
     </div>
   </section>
+
+  <!-- end section -->
 
   <!-- end section -->
 
@@ -242,6 +250,10 @@
   </footer>
   <!-- footer section -->
 
+  <script>
+    AOS.init();
+  </script>
+  
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/circles.min.js"></script>
